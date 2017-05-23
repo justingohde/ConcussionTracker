@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FTQ_Results</title>
+    <% include partials/head %>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src= "/js/script2.js"></script>
+    <link rel="stylesheet" type="text/css" href="/results/css/style.css">
+</head>
+
+<body>
+        <% include partials/nav %>
+        <div id='dashboard'></div>
+        
+        
+        	<%for(i=0;i<7;i++){%>
+        	<h1><%=dataCH.form[i].title%></h1>
+        	<ol class=questions id=<%=dataCH.form[i].id%>>
+        	
+        		<%for(j=0;j<dataCH.form[i].questions.length;j++){%>
+  				<li class=question id=<%=dataCH.form[i].questions[j].id%>>
+  					<%=dataCH.form[i].questions[j].question%><ul class=answers></ul>
+  				</li>
+  				<%}%>
+  			</ol>
+            <button class="action submit btn btn-success" id="submit">Submit</button>
+        	<%}%>
+        
+
+
+</body>
+</html>

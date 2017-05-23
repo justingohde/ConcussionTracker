@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Account Settings</title>
+    <% include partials/head %>
+</head>
+
+<body>
+    <% include partials/nav %>
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1>Account Settings</h1>
+            </div>
+            <!--Bennet's Buttons for RTP-->
+            <label id="eRTP">
+  			<input type="checkbox" data-toggle="toggle" id="eRTPbutton"> 
+		</label>
+            <div id="eRTPText">Enable Return to Play</div>
+            <BR>
+            <label id="eTestMode">
+  			<input type="checkbox" id="eTestModeButton" data-toggle="toggle"> Enable Test Mode
+		</label>
+            <h3>Test mode disables the requirement for 24 hours to elapse between tracking symptoms. Use this mode if you want to test the Return to Play protocol.</h3>
+            <!--end Bennet's buttons for RTP-->
+
+
+            <div class="col-md-12">
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name" role="tab">
+                        <h4 class="panel-title">
+                            <table width="50%">
+                                <col width="50%">
+                                <col width="50%">
+                                <tr>
+                                    <td><strong>Username</strong></td>
+									<td id = "PI_0_0H"></td>
+                                </tr>
+                            </table>
+                        </h4>
+                    </div>
+                    <div id="name" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="name" hide=t rue>
+                        <div class="panel-body">
+                            <ul class="dl-horizontal">
+                                <form>
+                                    <div class="form-group col-xs-6">
+                                        <input id="PI_0_0" class="form-control input-group-lg reg_name" type="text" name="lastname" title="Enter last name" /> </div>
+                                    <button type="submit" class="btn btn-primary update">Submit</button>
+                                </form>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#birthday" aria-expanded="false" aria-controls="birthday" role="tab">
+                        <h4 class="panel-title">
+                            <table width="50%">
+                                <col width="50%">
+                                <col width="50%">
+                                <tr>
+                                    <td><strong>Birthday</strong></td>
+									<td id = "PI_1_0H"></td>
+                                </tr>
+                            </table>
+                        </h4>
+                    </div>
+                    <div id="birthday" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="birthday" hide=true>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group col-xs-12">
+                                    <input id="PI_1_0" class="form-control input-group-lg reg_name" type="date" name="email" title="Enter birthday" /> </div>
+									<button  type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#gender" aria-expanded="false" aria-controls="gender" role="tab">
+                        <h4 class="panel-title">
+
+                            <table width="50%">
+                                <col width="50%">
+                                <col width="50%">
+                                <tr>
+                                    <td><strong>Gender</strong></td>
+									<td id = "PI_2_0H"></td>
+                                </tr>
+                            </table>
+                        </h4>
+                    </div>
+                    <div id="gender" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="gender" hide=t rue>
+                        <div class="panel-body">
+                            <form>
+                                <input id="PI_2_0" type="checkbox" name="Male" /> Male
+                                <br>
+                                <input id="PI_2_1" type="checkbox" name="Female" /> Female
+                                <br>
+                                <input id="PI_2_2" type="checkbox" name="Other" /> Other
+                                <input id="PI_2_3" type="text" name="Other" /> 
+                                <br>
+                                <button type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#gender" aria-expanded="false" aria-controls="name">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div role="button" class="panel-heading" data-toggle="collapse" data-parent="#accordion" href="#email" aria-expanded="false" aria-controls="email" role="tab">
+                        <h4 class="panel-title">
+
+                            <table width="50%">
+                                <col width="50%">
+                                <col width="50%">
+                                <tr>
+                                    <td><strong>Email</strong></td>
+									<td id = "PI_3_0H"></td>
+                                </tr>
+                            </table>
+                        </h4>
+                    </div>
+                    <div id="email" class="panel-collapse collapse" role="tabpanel" aria-expanded="false" aria-labelledby="email" hide=t rue>
+                        <div class="panel-body">
+                            <form>
+                                <div class="form-group col-xs-12">
+                                    <input id="PI_3_0" class="form-control input-group-lg reg_name" type="text" name="email" title="Enter email" placeholder="johnsmith@example.com" /> </div>
+                                <button type="submit" class="btn btn-primary update" data-toggle="collapse" data-parent="#accordion" href="#name" aria-expanded="false" aria-controls="name">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="settings.js"></script>
+</body>
+
+</html>
