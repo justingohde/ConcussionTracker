@@ -1,5 +1,5 @@
 {
-  "name": "sprint-3",
+  "name": "concussion_tracker",
   "version": "0.0.1",
   "description": "This is sprint 3 of the Concussion Tracker.\r Group Members:\r Julian Anderson\r Nick Mullikin\r Jeffrey Shi\r Nick Vonk\r Arjun Madan",
   "main": "app.js",
